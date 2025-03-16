@@ -75,6 +75,17 @@ public class Family
     public void removeAChild(int position)
     {
         //????
+        if(position >= 0 && position < childCount){
+            for (int i = 0; i<childCount - 1; i++){
+                children[i] = children[i+1];
+            }
+
+            children[childCount-1] = null;
+            childCount--;
+        }else{
+            System.out.println("Invalid Position");
+        }
+
     }
     
     //Searching
